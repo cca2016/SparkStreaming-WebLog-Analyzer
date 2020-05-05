@@ -3,6 +3,13 @@
 ## Learning Demo
 Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
 
+JDK: 1.8
+Spark Version: 2.2.0
+Scala Version: 2.11
+Apache Flume: 1.6.0
+Kafka: 0.8.2.1
+ZooKeeper: 3.6.1
+
 
 ### Start kafka
    1. start ZooKeeper in Zookeeper Directory:  
