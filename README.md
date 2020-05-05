@@ -18,7 +18,6 @@ Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
   ```
   ./bin/kafka-topics.sh --create --zookeeper localhost:9092 --replication-factor 1 --partitions 1 --topic kafka_streaming_topic
   ```
-
   kafka producer
   ```
   ./kafka-console-producer.sh --broker-list localhost:9092 --topic kafka_streaming_topic
@@ -28,8 +27,12 @@ Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
   ```
   ./kafka-console-consumer.sh --zookeeper localhost:2181 --topic kafka_streaming_topic
   ```
+### Start Apache Flume using flume kafka sink
+  ```
+  ./bin/flume-ng agent --conf conf --conf-file conf/flume-kafka.conf --name sa -Dflume.root.logger=INFO,console
+  ```
 
-### spark submit on server:
+### Spark submit on server:
 ```
   spark-submit \
   --class KafkaReceiverWordCount \
