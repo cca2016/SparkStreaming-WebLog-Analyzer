@@ -27,7 +27,7 @@ Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
   ```
   ./kafka-console-consumer.sh --zookeeper localhost:2181 --topic kafka_streaming_topic
   ```
-### Start Apache Flume using flume kafka sink
+### Start Apache Flume using flume-kafka.conf
   ```
   ./bin/flume-ng agent --conf conf --conf-file conf/flume-kafka.conf --name sa -Dflume.root.logger=INFO,console
   ```
