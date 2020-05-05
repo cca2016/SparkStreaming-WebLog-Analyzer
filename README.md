@@ -4,7 +4,7 @@
 Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
 
 
-#Start kafka
+### Start kafka
     #1. start ZooKeeper in Zookeeper Directory: 
     ```
     ./bin/zkServer.sh start
@@ -14,22 +14,22 @@ Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
     ./bin/kafka-server-start.sh config/server.properties
     ```
 
-#Create a topic:
+### Create a topic:
   ```
   ./bin/kafka-topics.sh --create --zookeeper localhost:9092 --replication-factor 1 --partitions 1 --topic kafka_streaming_topic
   ```
 
-  #kafka producer
+  kafka producer
   ```
   ./kafka-console-producer.sh --broker-list localhost:9092 --topic kafka_streaming_topic
   ```
 
-  #kafka concole consumer (this program is another consumer)
+  kafka concole consumer (this program is another consumer)
   ```
   ./kafka-console-consumer.sh --zookeeper localhost:2181 --topic kafka_streaming_topic
   ```
 
-#spark submit on server:
+### spark submit on server:
 ```
   spark-submit \
   --class KafkaReceiverWordCount \
