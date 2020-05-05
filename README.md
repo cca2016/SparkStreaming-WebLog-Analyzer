@@ -3,7 +3,7 @@
 ## Learning Demo
 Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
 
-'''
+```
 #Start kafka
     #1. start ZooKeeper in Zookeeper Directory: 
     ./bin/zkServer.sh start
@@ -26,4 +26,4 @@ Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
   --name KafkaReceiverWordCount \
   --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.2.0 \
   /xxxxx.jar server:2181 test kafka_streaming_topic
-'''
+```
