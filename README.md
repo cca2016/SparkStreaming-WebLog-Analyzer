@@ -5,12 +5,12 @@ Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
 
 
 ### Start kafka
-    1. start ZooKeeper in Zookeeper Directory: 
+   1. start ZooKeeper in Zookeeper Directory: 
     ```
     ./bin/zkServer.sh start
     ```
     
-    2. start Kafka in Kafka Directory:
+   2. start Kafka in Kafka Directory:
     ```
     ./bin/kafka-server-start.sh config/server.properties
     ```
