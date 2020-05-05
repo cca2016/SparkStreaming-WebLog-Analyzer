@@ -9,7 +9,6 @@ Log4j -> Flume Avro source -> Flume Kafka sink -> Spark Streaming
     ```
     ./bin/zkServer.sh start
     ```
-    
    2. start Kafka in Kafka Directory:   
     ```
     ./bin/kafka-server-start.sh config/server.properties
